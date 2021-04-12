@@ -5,51 +5,11 @@
 $paddingLinks: 5px;
 
 .hero-banner {
+    background-image: url($hero-banner);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
-    &__search-container {
-        background: rgba($bg-black, 0.8);
-        padding: 1em;
-    }
-
-    &__list {
-        list-style: none;
-        padding: 0;
-        margin-bottom: 0;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    &__item {
-        margin-right: 0.5em;
-        padding: $paddingLinks;
-
-        &:first-child {
-            color: $white;
-            font-weight: 700;
-
-            &:hover {
-                background-color: transparent;
-            }
-        }
-
-        &:hover {
-            background-color: $bg-orange-d5;
-            border-radius: 4px;
-            padding: $paddingLinks;
-            cursor: pointer;
-        }
-    }
-
-    &__link {
-        color: $white;
-
-        &:hover {
-            color: $white;
-            text-decoration: none;
-        }
-    }
 }
