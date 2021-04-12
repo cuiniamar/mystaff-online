@@ -1,0 +1,78 @@
+// ============================================================================
+// Site defaults
+// ============================================================================
+
+// Base font size
+// this will affect all 'rem' and 'em' based units
+// need to be declared in root 'html'
+$base-font: 16px !default;
+$font-size-base: $base-font !default; // fallback for bootstrap variable
+
+// Fonts
+$font-primary: 'Open Sans', sans-serif !default;
+$font-secondary: 'Montserrat', sans-serif !default;
+
+// Breakpoints - to be used as mixins
+// Base in Bootstrap Breakpoints
+// less than 576px is default style, mobile-first approach
+$mobileUp: '(min-width: 576px)' !default;
+$tabletUp: '(min-width: 768px)' !default;
+$desktopUp: '(min-width: 992px)' !default;
+$widescreenUp: '(min-width: 1200px)' !default;
+$widerscreenUp: '(min-width: 1440px)' !default;
+
+// Color Pallete
+// ============================================================================
+// ===============================
+// Base Colors
+// ===============================
+$white: #ffffff;
+$black: #000000;
+
+// ===============================
+// Initial Colors
+// Can be changed colors
+// ===============================
+
+$color-1: #F36B2D !default;
+$color-2: #222222 !default;
+
+// ===============================
+// Derived Colors
+// Base from initial colors
+// Naming Convention:
+    // lighten: color-number-lightenPercentage
+    // darken: color-number-darkenPercentage
+// ===============================
+
+$color-1-d5: darken($color-1, 5%);
+
+$color-2-l50: lighten($color-2, 50%);
+$color-2-l60: lighten($color-2, 60%);
+$color-2-l75: lighten($color-2, 75%);
+$color-2-l80: lighten($color-2, 80%);
+$color-2-l85: lighten($color-2, 85%);
+
+// ===============================
+// Assigned Colors
+// ===============================
+
+$bg-orange: $color-1;
+$bg-orange-d5: $color-1-d5;
+
+$text-orange: $color-1;
+$text-orange-d5: $color-1-d5;
+
+$bg-black: $color-2;
+$bg-black-l50: $color-2-l50;
+$bg-black-l60: $color-2-l60;
+$bg-black-l75: $color-2-l75;
+$bg-black-l80: $color-2-l80;
+$bg-black-l85: $color-2-l85;
+
+$text-black: $color-2;
+$text-black-l50: $color-2-l50;
+$text-black-l60: $color-2-l60;
+$text-black-l75: $color-2-l75;
+$text-black-l80: $color-2-l80;
+$text-black-l85: $color-2-l85;

@@ -1,0 +1,63 @@
+// Declaring Bootstrap core files here
+// so that it is available globally
+// mostly 3rd party plugins
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+
+// ============================================================================
+// Utilities - Variable file along with starting point Mixins, Helpers and Placeholders.
+// ============================================================================
+
+// @import "utilities/font";
+@import "utilities/variables";
+@import "utilities/fonts";
+@import "utilities/functions";
+@import "utilities/mixins";
+@import "utilities/breakpoint-mixins";
+@import "utilities/helpers";
+
+
+// ============================================================================
+// Vendors / 3rd Party plugins
+// ============================================================================
+
+// @import "vendors/";
+
+
+// ============================================================================
+// Base - Site defaults
+// ============================================================================
+
+@import "base/default-styles";
+@import "base/global";
+
+
+// ============================================================================
+// Layout
+// ============================================================================
+
+@import "layouts/header";
+@import "layouts/footer";
+
+
+// ============================================================================
+// Components
+// ============================================================================
+
+@import "components/buttons";
+@import "components/hero-banner";
+
+
+// ============================================================================
+// Pages
+// ============================================================================
+
+// @import "pages/";
+
+
+// ============================================================================
+// Themes
+// ============================================================================
+
+// @import "themes/";

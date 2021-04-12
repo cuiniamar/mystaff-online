@@ -1,0 +1,281 @@
+/* ============================================================================
+** Header Styles
+==============================================================================*/
+
+$alignment: 1em;
+$alignmentSm: 1.5em;
+$navHeight: 80px;
+$navHeightSm: 100px;
+
+.nav {
+    background-color: $bg-black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: $navHeight;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    @include mobileUp {
+        height: $navHeightSm;
+    }
+
+    @include desktopUp {
+        height: 130px;
+        padding: 1.5em;
+    }
+
+    &__brand {
+        padding-left: $alignment;
+
+        @include mobileUp {
+            padding-left: $alignmentSm;
+        }
+
+        @include desktopUp {
+            width: 33.33%;
+            padding-left: 0;
+        }
+
+        img {
+            width: 65%;
+
+            @include mobileUp {
+                width: 80%;
+            }
+
+            @include desktopUp {
+                width: initial;
+            }
+        }
+    }
+
+    &__icon {
+        margin-top: -18px;
+        margin-right: $alignment;
+        width: 30px;
+        position: relative;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        
+        @include mobileUp {
+            margin-right: $alignmentSm;
+        }
+
+        @include desktopUp {
+            display: none;
+        }
+
+        span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background-color: $bg-orange;
+            border-radius: 4px;
+            opacity: 1;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+
+            &:nth-child(1) {
+                top: 0px;
+
+                @include mobileUp {
+                    top: 1px;
+                }
+            }
+
+            &:nth-child(2),
+            &:nth-child(3) {
+                top: 9px;
+            }
+
+            &:nth-child(4) {
+                top: 17px;
+            }
+        }
+
+        &.is-active span:nth-child(1) {
+            top: 12px;
+            width: 0%;
+        }
+
+        &.is-active span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        &.is-active span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        &.is-active span:nth-child(4) {
+            top: 12px;
+            width: 0%;
+        }
+    }
+
+    &__links {
+        display: block;
+        background-color: $bg-black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        margin-top: $navHeight;
+        transform: translate3d(0,-400%,0);
+        transition: transform .3s;
+
+        @include mobileUp {
+            margin-top: $navHeightSm;
+        }
+
+        @include desktopUp {
+            background-color: transparent;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            position: initial;
+            height: initial;
+            margin-top: 0;
+            transform: translate3d(0, 0, 0);
+            width: 66.66%;
+        }
+
+        &.is-active {
+            transform: translate3d(0, 0, 0);
+
+            .nav__item {
+                padding: 0.8em $alignment;
+
+                @include mobileUp {
+                    padding: 1em $alignmentSm;
+                }
+            }
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+
+        @include desktopUp {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 0;
+        }
+
+        &:last-child {
+            border-top: 1px solid $bg-black-l80;
+
+            @include desktopUp {
+                border-top: 0;
+            }
+        }
+
+        &:first-child {
+            .nav__item:first-child {
+                @include desktopUp {
+                    order: 5;
+                }
+            }
+        }
+
+        &:last-child {
+            .nav__item:last-child {
+                @include desktopUp {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    &__item {
+        @include desktopUp {
+            margin-right: 20px;
+        }
+
+        // &:hover {
+        //     background-color: $bg-orange-d5;
+        // }
+
+        &--search {
+            position: relative;
+        }
+
+        &--create {
+            @include desktopUp {
+                background-color: $bg-orange;
+                border-radius: 4px;
+                width: 128px;
+                height: 40px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &:hover {
+                @include desktopUp {
+                    background-color: $bg-orange-d5;
+                    cursor: pointer;
+                }
+            }
+
+            .nav__link {
+                &:hover {
+                    @include desktopUp {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    &__link {
+        color: $white;
+        position: relative;
+
+        &:hover {
+            text-decoration: none;
+            color: $text-orange;
+        }
+    }
+
+    &__search-icon {
+        color: $text-black-l50;
+        font-size: 1.2rem;
+        background-color: transparent;
+        width: 38px;
+        height: 38px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+
+        @include desktopUp {
+            color: $white;
+            display: initial;
+            font-size: 1rem;
+            position: static;
+            width: initial;
+            height: 0;
+        }
+    }
+
+    &__search-input {
+        padding-left: 40px;
+
+        @include desktopUp {
+            display: none;
+        }
+    }
+}

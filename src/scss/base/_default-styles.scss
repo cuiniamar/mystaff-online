@@ -1,0 +1,67 @@
+/* ============================================================================
+** HTML Defaults
+==============================================================================*/
+
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	font-size: $font-size-base; // this will affect all 'rem' and 'em' based units
+}
+
+body {
+	margin: 0 !important;
+	padding: 0 !important;
+	font-family: $font-primary;
+	color: $text-black;
+}
+
+h1 {
+	font-family: $font-secondary;
+	font-size: 2rem;
+	font-weight: 700;
+
+	@include mobileUp {
+		font-size: 2.5rem;
+	}
+
+	@include desktopUp {
+		font-size: 3.5rem;
+	}
+}
+
+h2 {
+	font-size: 1.875rem;
+	font-weight: 700;
+	color: $bg-orange-d5;
+}
+
+h3 {
+	font-size: 1.563rem;
+	font-weight: 600;
+}
+
+h4 {
+	font-size: 1.25rem;
+	color: $text-orange-d5;
+}
+
+h5 {
+	font-size: 1.125rem;
+	font-weight: 700;
+}
+
+h6 {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+a {
+	color: $text-orange;
+
+	&:hover {
+		color: $text-orange-d5;
+	}
+}

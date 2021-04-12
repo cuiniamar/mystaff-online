@@ -1,0 +1,31 @@
+// =========================================================================
+// Helpers
+// ==========================================================================
+
+// ======================================
+// Fonts
+// ======================================
+
+.font-primary { font-family: $font-primary !important; }
+.font-secondary { font-family: $font-secondary !important; }
+
+// ======================================
+// Colors
+// ======================================
+
+.text-light { color: $white !important; }
+.bg-light { background-color: $white !important; }
+
+.text-dark { color: $black !important; }
+.bg-dark { background-color: $black !important; }
+
+.bg-orange { background-color: $bg-orange !important; }
+.text-orange { color: $text-orange !important; }
+
+.bg-black { background-color: $bg-black !important; }
+.text-black { color: $text-black !important; }
+
+
+// ======================================
+// Other Helpers
+// ======================================
