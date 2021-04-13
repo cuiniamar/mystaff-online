@@ -8725,6 +8725,17 @@ a {
     .block-spaces {
       margin-top: 6em; } }
 
+.prescreened {
+  color: #43A047;
+  font-size: 0.875rem; }
+
+/* ============================================================================
+** Bootstrap overrides styles
+==============================================================================*/
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px; } }
+
 /* ============================================================================
 ** Header Styles
 ==============================================================================*/
@@ -8738,7 +8749,8 @@ a {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; }
+  width: 100%;
+  z-index: 99; }
   @media (min-width: 576px) {
     .nav {
       height: 100px; } }
@@ -9065,3 +9077,117 @@ a {
     @media (min-width: 768px) {
       .logo-brands__item img {
         width: 85%; } }
+
+/* ============================================================================
+** Feature candidate styles
+==============================================================================*/
+.featured-candidate__container {
+  border: 1px solid #eeeeee;
+  box-shadow: 6px 4px 12px -1px rgba(34, 34, 34, 0.3);
+  padding-top: 1em;
+  position: relative; }
+  @media (min-width: 576px) {
+    .featured-candidate__container {
+      padding-top: 2em; } }
+  .featured-candidate__container .prescreened {
+    text-align: right;
+    margin-right: 20px; }
+
+@media (min-width: 576px) {
+  .featured-candidate__head img {
+    margin-top: 1.5em;
+    margin-bottom: 1em; } }
+
+.featured-candidate__body {
+  margin: 1em 0; }
+
+.featured-candidate__name, .featured-candidate__exp, .featured-candidate__job-title, .featured-candidate__rating, .featured-candidate__location {
+  margin-bottom: 5px;
+  text-align: center; }
+
+.featured-candidate__name {
+  font-size: 1.25rem;
+  font-weight: 600; }
+
+.featured-candidate__exp {
+  color: #bbbbbb;
+  font-size: 0.875rem; }
+
+.featured-candidate__job-title {
+  color: #F36B2D;
+  margin-bottom: 2em; }
+
+@media (min-width: 576px) {
+  .featured-candidate__others {
+    margin-bottom: 3em; } }
+
+@media (min-width: 768px) {
+  .featured-candidate__others {
+    margin-bottom: 2em; } }
+
+@media (min-width: 576px) {
+  .featured-candidate__others p,
+  .featured-candidate__others ul {
+    padding: 0 3em; } }
+
+@media (min-width: 768px) {
+  .featured-candidate__others p,
+  .featured-candidate__others ul {
+    padding: 0 1em; } }
+
+@media (min-width: 992px) {
+  .featured-candidate__others p,
+  .featured-candidate__others ul {
+    padding: 0; } }
+
+@media (min-width: 1200px) {
+  .featured-candidate__others p,
+  .featured-candidate__others ul {
+    padding: 0 1em; } }
+
+.featured-candidate__rating, .featured-candidate__location {
+  color: #bbbbbb;
+  font-size: 0.875rem; }
+
+.featured-candidate__footer {
+  display: flex;
+  width: 100%; }
+  .featured-candidate__footer .btn-shortlist,
+  .featured-candidate__footer .btn-profile {
+    background-color: #ffffff;
+    color: #a2a2a2;
+    border: 1px solid #eeeeee;
+    border-radius: 0;
+    text-transform: uppercase;
+    padding: 1em 0;
+    font-weight: 600; }
+    .featured-candidate__footer .btn-shortlist:hover,
+    .featured-candidate__footer .btn-profile:hover {
+      background-color: #f25a15;
+      border-color: #f25a15;
+      color: #ffffff; }
+  .featured-candidate__footer .btn-profile {
+    margin: 0; }
+
+/* ============================================================================
+** Star ratings styles
+==============================================================================*/
+.star-ratings {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center; }
+  @media (min-width: 576px) {
+    .star-ratings {
+      justify-content: flex-start; } }
+  .star-ratings__item {
+    color: #43A047;
+    font-size: 0.875rem;
+    margin-right: 5px; }
+    .star-ratings__item:last-child {
+      margin-right: 0;
+      background-color: #43A047;
+      color: #ffffff;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-size: 0.75rem; }

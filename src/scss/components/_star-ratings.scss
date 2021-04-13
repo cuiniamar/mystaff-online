@@ -1,0 +1,29 @@
+/* ============================================================================
+** Star ratings styles
+==============================================================================*/
+
+.star-ratings {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    @include mobileUp {
+        justify-content: flex-start;
+    }
+
+    &__item {
+        color: $text-accent;
+        font-size: pxToRem(14px);
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0;
+            background-color: $bg-accent;
+            color: $white;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-size: pxToRem(12px);
+        }
+    }
+}
