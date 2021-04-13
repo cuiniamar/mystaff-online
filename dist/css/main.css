@@ -8693,8 +8693,9 @@ h2 {
       font-size: 1.875rem; } }
 
 h3 {
+  font-family: "Montserrat", sans-serif;
   font-size: 1.563rem;
-  font-weight: 600; }
+  font-weight: 500; }
 
 h4 {
   font-size: 1.25rem;
@@ -8724,6 +8725,20 @@ a {
   @media (min-width: 992px) {
     .block-spaces {
       margin-top: 6em; } }
+
+.title {
+  text-transform: uppercase;
+  text-align: center; }
+
+.subtitle {
+  text-align: center;
+  margin-top: 25px; }
+  @media (min-width: 992px) {
+    .subtitle {
+      font-size: 1.125rem;
+      line-height: 2;
+      max-width: 1000px;
+      margin: 25px auto 0 auto; } }
 
 .prescreened {
   color: #43A047;
@@ -9191,3 +9206,35 @@ a {
       padding: 2px 4px;
       border-radius: 4px;
       font-size: 0.75rem; }
+
+/* ============================================================================
+** We do styles
+==============================================================================*/
+.we-do__content {
+  background-color: #222222;
+  padding: 1em 0.5em;
+  text-align: center; }
+  @media (min-width: 576px) {
+    .we-do__content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2em; } }
+  @media (min-width: 992px) {
+    .we-do__content {
+      min-height: 370px; } }
+  @media (min-width: 1200px) {
+    .we-do__content {
+      min-height: 275px; } }
+  .we-do__content img {
+    width: 80px; }
+
+.we-do__description {
+  margin-top: 20px; }
+  @media (min-width: 576px) {
+    .we-do__description {
+      margin-top: 0;
+      margin-left: 40px; } }
+  @media (min-width: 992px) {
+    .we-do__description {
+      margin-left: 20px; } }

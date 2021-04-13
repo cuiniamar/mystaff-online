@@ -1,0 +1,43 @@
+/* ============================================================================
+** We do styles
+==============================================================================*/
+
+.we-do {
+    &__content {
+        background-color: $bg-black;
+        padding: 1em 0.5em;
+        text-align: center;
+
+        @include mobileUp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2em;
+        }
+
+        @include desktopUp {
+            min-height: 370px;
+        }
+
+        @include widescreenUp {
+            min-height: 275px;
+        }
+
+        img {
+            width: 80px;
+        }
+    }
+
+    &__description {
+        margin-top: 20px;
+
+        @include mobileUp {
+            margin-top: 0;
+            margin-left: 40px;
+        }
+
+        @include desktopUp {
+            margin-left: 20px;
+        }
+    }
+}
