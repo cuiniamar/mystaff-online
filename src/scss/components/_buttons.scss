@@ -2,3 +2,154 @@
 ** Buttons Styles
 ==============================================================================*/
 
+%default {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 6px;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    padding: 0.7em 1.3em;
+    box-shadow: 0;
+    border: 0;
+    width: 120px;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+}
+
+%default-icon {
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    padding: 0.7em 1.3em;
+    width: 150px;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: all 0.1s linear 0s;
+    box-shadow: 0;
+    border: 0;
+
+    &::before {
+        content: "\f061";
+        font-family: FontAwesome;
+        font-size: 15px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        right: 0;
+        top: 0;
+        opacity: 0;
+        height: 100%;
+        width: 40px;
+        transition: all 0.2s linear 0s;
+    }
+
+    &:hover,
+    &:focus {
+        text-indent: -48px;
+        text-decoration: none;
+
+        &::before {
+            opacity: 1;
+            text-indent: 0px;
+        }
+    }
+}
+
+// ======================================
+// Button color mixin
+// ======================================
+@mixin btnMain($bg, $color, $bgHover, $colorHover) {
+    @extend %default;
+    background-color: $bg;
+    color: $color;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $bgHover;
+        color: $colorHover;
+    }
+}
+
+@mixin btnMainOutline($bg, $color, $bgHover, $colorHover, $borderBg, $borderBgHover) {
+    @extend %default;
+    background-color: $bg;
+    color: $color;
+    border: 1px solid $borderBg;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $bgHover;
+        color: $colorHover;
+        border-color: $borderBgHover;
+    }
+}
+
+@mixin btnMainIcon($bg, $color, $bgHover, $colorHover) {
+    @extend %default-icon;
+    background-color: $bg;
+    color: $color;
+
+    &:hover,
+    &:focus {
+        background-color: $bgHover;
+        color: $colorHover;
+    }
+}
+
+@mixin btnMainOutlineIcon($bg, $color, $bgHover, $colorHover, $borderBg, $borderBgHover) {
+    @extend %default-icon;
+    background-color: $bg;
+    color: $color;
+    border: 1px solid $borderBg;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $bgHover;
+        color: $colorHover;
+        border-color: $borderBgHover;
+    }
+}
+
+.huge {
+    padding: 0.8em 2em;
+    font-size: pxToRem(18px);
+
+    &-icon {
+        @extend .huge;
+        width: 180px;
+    }
+}
+
+.tiny {
+    padding: 0.6em 0.8em;
+    font-size: pxToRem(14px);
+}
+
+.button {
+    &-main {
+        @include btnMain($bg-orange, $white, $bg-orange-d5, $white);
+    }
+
+    &-main-outline {
+        @include btnMainOutline(transparent, $text-orange, $bg-orange-d5, $white, $bg-orange-d5, $bg-orange-d5);
+    }
+
+    &-main-icon {
+        @include btnMainIcon($bg-orange, $white, $bg-orange-d5, $white);
+    }
+
+    &-main-outline-icon {
+        @include btnMainOutlineIcon(transparent, $text-orange, $bg-orange-d5, $white, $bg-orange-d5, $bg-orange-d5);
+    }
+}

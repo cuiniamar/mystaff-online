@@ -7,6 +7,7 @@ $paddingLinks: 5px;
 .long-search {
     background: rgba($bg-black, 0.8);
     padding: 1em;
+    position: relative;
 
     &__multiselect {
         background-color: $white;
@@ -20,6 +21,27 @@ $paddingLinks: 5px;
         
         @include tabletUp {
             border-radius: 6px 0 0 6px;
+        }
+    }
+
+    &__categories {
+        background-color: $white;
+        border: 1px solid $bg-black-l80;
+        border-radius: 4px;
+        box-shadow: 2px 6px 18px -3px rgba($bg-black, 0.75);
+        margin-top: 5px;
+        padding: 1em 0.5em;
+        height: 200px;
+        width: 100%;
+        overflow-y: auto;
+        position: absolute;
+        z-index: -1;
+        transition: all .2s ease-in-out;
+        opacity: 0;
+
+        &.is-active {
+            z-index: 2;
+            opacity: 1;
         }
     }
 

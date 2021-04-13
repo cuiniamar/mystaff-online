@@ -8698,11 +8698,11 @@ h3 {
   font-weight: 500; }
 
 h4 {
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   color: #f25a15; }
 
 h5 {
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 700; }
 
 h6 {
@@ -8773,7 +8773,11 @@ a {
     .nav {
       height: 130px;
       padding: 1.5em;
-      background-color: transparent; } }
+      background-color: transparent;
+      transition: .4s ease-out; }
+      .nav.is-scrolled {
+        height: 100px;
+        background-color: #222222; } }
   .nav__brand {
     padding-left: 1em; }
     @media (min-width: 576px) {
@@ -8947,6 +8951,96 @@ a {
 /* ============================================================================
 ** Buttons Styles
 ==============================================================================*/
+.button-main, .button-main-outline {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  border-radius: 6px;
+  overflow: hidden;
+  transition-duration: 0.3s;
+  padding: 0.7em 1.3em;
+  box-shadow: 0;
+  border: 0;
+  width: 120px; }
+  .button-main:hover, .button-main-outline:hover, .button-main:focus, .button-main-outline:focus, .button-main:active, .button-main-outline:active {
+    text-decoration: none; }
+
+.button-main-icon, .button-main-outline-icon {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  padding: 0.7em 1.3em;
+  width: 150px;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: all 0.1s linear 0s;
+  box-shadow: 0;
+  border: 0; }
+  .button-main-icon::before, .button-main-outline-icon::before {
+    content: "\f061";
+    font-family: FontAwesome;
+    font-size: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    height: 100%;
+    width: 40px;
+    transition: all 0.2s linear 0s; }
+  .button-main-icon:hover, .button-main-outline-icon:hover, .button-main-icon:focus, .button-main-outline-icon:focus {
+    text-indent: -48px;
+    text-decoration: none; }
+    .button-main-icon:hover::before, .button-main-outline-icon:hover::before, .button-main-icon:focus::before, .button-main-outline-icon:focus::before {
+      opacity: 1;
+      text-indent: 0px; }
+
+.huge, .huge-icon {
+  padding: 0.8em 2em;
+  font-size: 1.125rem; }
+  .huge-icon {
+    width: 180px; }
+
+.tiny {
+  padding: 0.6em 0.8em;
+  font-size: 0.875rem; }
+
+.button-main {
+  background-color: #F36B2D;
+  color: #ffffff; }
+  .button-main:hover, .button-main:focus, .button-main:active {
+    background-color: #f25a15;
+    color: #ffffff; }
+
+.button-main-outline {
+  background-color: transparent;
+  color: #F36B2D;
+  border: 1px solid #f25a15; }
+  .button-main-outline:hover, .button-main-outline:focus, .button-main-outline:active {
+    background-color: #f25a15;
+    color: #ffffff;
+    border-color: #f25a15; }
+
+.button-main-icon {
+  background-color: #F36B2D;
+  color: #ffffff; }
+  .button-main-icon:hover, .button-main-icon:focus {
+    background-color: #f25a15;
+    color: #ffffff; }
+
+.button-main-outline-icon {
+  background-color: transparent;
+  color: #F36B2D;
+  border: 1px solid #f25a15; }
+  .button-main-outline-icon:hover, .button-main-outline-icon:focus, .button-main-outline-icon:active {
+    background-color: #f25a15;
+    color: #ffffff;
+    border-color: #f25a15; }
+
 /* ============================================================================
 ** Hero banner styles
 ==============================================================================*/
@@ -8971,7 +9065,8 @@ a {
 ==============================================================================*/
 .long-search {
   background: rgba(34, 34, 34, 0.8);
-  padding: 1em; }
+  padding: 1em;
+  position: relative; }
   .long-search__multiselect {
     background-color: #ffffff;
     color: #bbbbbb;
@@ -8984,6 +9079,23 @@ a {
     @media (min-width: 768px) {
       .long-search__multiselect {
         border-radius: 6px 0 0 6px; } }
+  .long-search__categories {
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 4px;
+    box-shadow: 2px 6px 18px -3px rgba(34, 34, 34, 0.75);
+    margin-top: 5px;
+    padding: 1em 0.5em;
+    height: 200px;
+    width: 100%;
+    overflow-y: auto;
+    position: absolute;
+    z-index: -1;
+    transition: all .2s ease-in-out;
+    opacity: 0; }
+    .long-search__categories.is-active {
+      z-index: 2;
+      opacity: 1; }
   .long-search__job-title {
     margin-top: 0.5em;
     position: relative; }
@@ -9098,7 +9210,7 @@ a {
 ==============================================================================*/
 .featured-candidate__container {
   border: 1px solid #eeeeee;
-  box-shadow: 6px 4px 12px -1px rgba(34, 34, 34, 0.3);
+  box-shadow: 2px 6px 18px -3px rgba(34, 34, 34, 0.75);
   padding-top: 1em;
   position: relative; }
   @media (min-width: 576px) {
@@ -9238,3 +9350,52 @@ a {
   @media (min-width: 992px) {
     .we-do__description {
       margin-left: 20px; } }
+
+/* ============================================================================
+** Find candidate styles
+==============================================================================*/
+.find-candidate {
+  background-image: url("./../images/background-images/find-candidate-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 500px;
+  padding: 4em 0; }
+  @media (min-width: 992px) {
+    .find-candidate {
+      padding: 5em 0; } }
+  .find-candidate__container {
+    background: rgba(34, 34, 34, 0.5);
+    padding: 1.5em 0.5em;
+    margin-top: 2em;
+    border-radius: 6px; }
+    @media (min-width: 576px) {
+      .find-candidate__container {
+        padding: 2em; } }
+    @media (min-width: 768px) {
+      .find-candidate__container {
+        max-width: 750px;
+        margin: 2em auto 0 auto; } }
+  .find-candidate__group {
+    position: relative; }
+    .find-candidate__group input {
+      border: 1px solid #bbbbbb;
+      padding-left: 54px;
+      border-radius: 4; }
+    .find-candidate__group::placeholder {
+      color: #a2a2a2; }
+    .find-candidate__group .button-main {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px; }
+  .find-candidate__icon {
+    width: 48px;
+    height: 48px;
+    background: transparent;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px 0 0 4px; }
+    .find-candidate__icon span {
+      color: #a2a2a2;
+      font-size: 1.3rem; }

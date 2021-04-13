@@ -1,0 +1,67 @@
+/* ============================================================================
+** Find candidate styles
+==============================================================================*/
+
+.find-candidate {
+    background-image: url($find-candidate-bg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    padding: 4em 0;
+
+    @include desktopUp {
+        padding: 5em 0;
+    }
+
+    &__container {
+        background: rgba($bg-black, .5);
+        padding: 1.5em 0.5em;
+        margin-top: 2em;
+        border-radius: 6px;
+
+        @include mobileUp {
+            padding: 2em;
+        }
+
+        @include tabletUp {
+            max-width: 750px;
+            margin: 2em auto 0 auto;
+        }
+    }
+
+    &__group {
+        position: relative;
+
+        input {
+            border: 1px solid $bg-black-l60;
+            padding-left: 54px;
+            border-radius: 4;
+        }
+
+        &::placeholder {
+            color: $text-black-l50;
+        }
+
+        .button-main {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        background: transparent;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px 0 0 4px;
+
+        span {
+            color: $text-black-l50;
+            font-size: 1.3rem;
+        }
+    }
+}

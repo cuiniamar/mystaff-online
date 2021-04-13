@@ -28,6 +28,12 @@ $navHeightSm: 100px;
         height: 130px;
         padding: 1.5em;
         background-color: transparent;
+        transition: .4s ease-out;
+
+        &.is-scrolled {
+            height: 100px;
+            background-color: $bg-black;
+        }
     }
 
     &__brand {
