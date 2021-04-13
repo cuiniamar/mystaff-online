@@ -1,0 +1,67 @@
+/* ============================================================================
+** Logo brands styles
+==============================================================================*/
+
+.logo-brands {
+    background-color: $text-black-l85;
+    padding: 2em 0;
+
+    @include tabletUp {
+        min-height: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        color: $text-black-l50;
+        font-size: 0.8rem;
+        font-family: $font-secondary;
+        font-weight: 500;
+        text-align: center;
+
+        @include mobileUp {
+            font-size: 1rem;
+        }
+
+        @include tabletUp {
+            font-size: pxToRem(20px);
+        }
+
+        @include desktopUp {
+            margin-bottom: 0;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item {
+        margin-right: 20px;
+
+        @include desktopUp {
+            margin-right: 40px;
+        }
+
+        @include widescreenUp {
+            margin-right: 70px;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        img {
+            @include tabletUp {
+                width: 85%;
+            }
+        }
+    }
+}

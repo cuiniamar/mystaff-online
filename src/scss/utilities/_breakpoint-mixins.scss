@@ -36,3 +36,10 @@
 		@content;
 	}
 }
+
+// XXXL devices (large desktops, 1200px and up)
+@mixin widestscreenUp {
+	@media #{$widestscreenUp} {
+		@content;
+	}
+}

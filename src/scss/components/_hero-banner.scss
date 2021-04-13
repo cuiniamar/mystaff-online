@@ -2,8 +2,6 @@
 ** Hero banner styles
 ==============================================================================*/
 
-$paddingLinks: 5px;
-
 .hero-banner {
     background-image: url($hero-banner);
     background-repeat: no-repeat;
@@ -12,4 +10,13 @@ $paddingLinks: 5px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    min-height: 600px;
+
+    @include desktopUp {
+        min-height: 650px;
+    }
+
+    @include widestscreenUp {
+        min-height: 850px;
+    }
 }

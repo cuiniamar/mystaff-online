@@ -26,6 +26,7 @@ $navHeightSm: 100px;
     @include desktopUp {
         height: 130px;
         padding: 1.5em;
+        background-color: transparent;
     }
 
     &__brand {

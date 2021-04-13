@@ -20,12 +20,12 @@ body {
 
 h1 {
 	font-family: $font-secondary;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	font-weight: 700;
 
-	@include mobileUp {
-		font-size: 2.5rem;
-	}
+	@include tabletUp {
+		font-size: 3rem;
+	} 
 
 	@include desktopUp {
 		font-size: 3.5rem;
@@ -33,9 +33,13 @@ h1 {
 }
 
 h2 {
-	font-size: 1.875rem;
-	font-weight: 700;
 	color: $bg-orange-d5;
+	font-size: 1.6rem;
+	font-weight: 700;
+
+	@include tabletUp {
+		font-size: 1.875rem;
+	}
 }
 
 h3 {

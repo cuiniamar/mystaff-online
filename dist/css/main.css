@@ -8675,19 +8675,22 @@ body {
 
 h1 {
   font-family: "Montserrat", sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700; }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     h1 {
-      font-size: 2.5rem; } }
+      font-size: 3rem; } }
   @media (min-width: 992px) {
     h1 {
       font-size: 3.5rem; } }
 
 h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  color: #f25a15; }
+  color: #f25a15;
+  font-size: 1.6rem;
+  font-weight: 700; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 1.875rem; } }
 
 h3 {
   font-size: 1.563rem;
@@ -8716,6 +8719,12 @@ a {
 .block-section {
   min-height: 400px; }
 
+.block-spaces {
+  margin-top: 4em; }
+  @media (min-width: 992px) {
+    .block-spaces {
+      margin-top: 6em; } }
+
 /* ============================================================================
 ** Header Styles
 ==============================================================================*/
@@ -8736,7 +8745,8 @@ a {
   @media (min-width: 992px) {
     .nav {
       height: 130px;
-      padding: 1.5em; } }
+      padding: 1.5em;
+      background-color: transparent; } }
   .nav__brand {
     padding-left: 1em; }
     @media (min-width: 576px) {
@@ -8920,7 +8930,14 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  min-height: 600px; }
+  @media (min-width: 992px) {
+    .hero-banner {
+      min-height: 650px; } }
+  @media (min-width: 1920px) {
+    .hero-banner {
+      min-height: 850px; } }
 
 /* ============================================================================
 ** Long seach styles
@@ -8928,6 +8945,53 @@ a {
 .long-search {
   background: rgba(34, 34, 34, 0.8);
   padding: 1em; }
+  .long-search__multiselect {
+    background-color: #ffffff;
+    color: #bbbbbb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border: 1px solid #eeeeee;
+    border-radius: 4px; }
+    @media (min-width: 768px) {
+      .long-search__multiselect {
+        border-radius: 6px 0 0 6px; } }
+  .long-search__job-title {
+    margin-top: 0.5em;
+    position: relative; }
+    @media (min-width: 768px) {
+      .long-search__job-title {
+        margin-top: 0; } }
+  .long-search__input {
+    padding: 1em;
+    width: 100%;
+    border: 1px solid #eeeeee;
+    border-radius: 4px; }
+    @media (min-width: 768px) {
+      .long-search__input {
+        border-radius: 0 4px 4px 0; } }
+    .long-search__input::placeholder {
+      color: #bbbbbb; }
+  .long-search__search-icon {
+    background-color: #F36B2D;
+    color: #ffffff;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 58px;
+    width: 58px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 0 4px 4px 0;
+    box-shadow: 0; }
+    .long-search__search-icon:hover {
+      background-color: #f25a15;
+      cursor: pointer; }
   .long-search__list {
     list-style: none;
     padding: 0;
@@ -8952,3 +9016,52 @@ a {
     .long-search__link:hover {
       color: #ffffff;
       text-decoration: none; }
+
+/* ============================================================================
+** Logo brands styles
+==============================================================================*/
+.logo-brands {
+  background-color: #fbfbfb;
+  padding: 2em 0; }
+  @media (min-width: 768px) {
+    .logo-brands {
+      min-height: 150px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center; } }
+  .logo-brands__title {
+    color: #a2a2a2;
+    font-size: 0.8rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-align: center; }
+    @media (min-width: 576px) {
+      .logo-brands__title {
+        font-size: 1rem; } }
+    @media (min-width: 768px) {
+      .logo-brands__title {
+        font-size: 1.25rem; } }
+    @media (min-width: 992px) {
+      .logo-brands__title {
+        margin-bottom: 0; } }
+  .logo-brands__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+  .logo-brands__item {
+    margin-right: 20px; }
+    @media (min-width: 992px) {
+      .logo-brands__item {
+        margin-right: 40px; } }
+    @media (min-width: 1200px) {
+      .logo-brands__item {
+        margin-right: 70px; } }
+    .logo-brands__item:last-child {
+      margin-right: 0; }
+    @media (min-width: 768px) {
+      .logo-brands__item img {
+        width: 85%; } }

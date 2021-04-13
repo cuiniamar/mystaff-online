@@ -2,9 +2,73 @@
 ** Long seach styles
 ==============================================================================*/
 
+$paddingLinks: 5px;
+
 .long-search {
     background: rgba($bg-black, 0.8);
     padding: 1em;
+
+    &__multiselect {
+        background-color: $white;
+        color: $text-black-l60;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        border: 1px solid $bg-black-l80;
+        border-radius: 4px;
+        
+        @include tabletUp {
+            border-radius: 6px 0 0 6px;
+        }
+    }
+
+    &__job-title {
+        margin-top: 0.5em;
+        position: relative;
+
+        @include tabletUp {
+            margin-top: 0;
+        }
+    }
+
+    &__input {
+        padding: 1em;
+        width: 100%;
+        border: 1px solid $bg-black-l80;
+        border-radius: 4px;
+
+        @include tabletUp {
+            border-radius: 0 4px 4px 0;
+        }
+
+        &::placeholder {
+            color: $text-black-l60;
+        }
+    }
+
+    &__search-icon {
+        background-color: $bg-orange;
+        color: $white;
+        font-size: 1.2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 58px;
+        width: 58px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border: 0;
+        border-radius: 0 4px 4px 0;
+        box-shadow: 0;
+
+        &:hover {
+            background-color: $bg-orange-d5;
+            cursor: pointer;
+        }
+    }
 
     &__list {
         list-style: none;

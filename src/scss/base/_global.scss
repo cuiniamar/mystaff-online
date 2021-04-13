@@ -3,5 +3,13 @@
 ==============================================================================*/
 
 .block-section {
-  min-height: 400px;
+	min-height: 400px;
+}
+
+.block-spaces {
+	margin-top: 4em;
+
+	@include desktopUp {
+		margin-top: 6em;
+	}
 }

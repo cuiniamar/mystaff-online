@@ -63,14 +63,24 @@
             <!-- Start Block Section -->
             <section class="block-section hero-banner">
                 <div class="container">
-                    <h1>Recruit. Manage. Succeed.</h1>
+                    <h1 class="text-white">Recruit. Manage. Succeed.</h1>
                     <div class="long-search">
                         <form action="">
                             <div class="row">
-                                <div class="col-12 col-sm-4 pr-sm-0">
-                                    
+                                <div class="col-12 col-md-4 col-lg-3 pr-md-0">
+                                    <div class="long-search__multiselect">
+                                        <i class="fa fa-list" aria-hidden="true"></i>
+                                        <p class="mb-0">All Categories</p>
+                                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                                    </div>
                                 </div>
-                                <div class="col-12 col-sm-8 pl-sm-0">
+                                <div class="col-12 col-md-8 col-lg-9 pl-md-0">
+                                    <div class="long-search__job-title">
+                                        <input type="text" class="long-search__input" placeholder="Enter Job Title Here...">
+                                        <button class="long-search__search-icon">
+                                            <span class="fa fa-search"></span>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -95,7 +105,51 @@
                     </div>
                 </div>
             </section>
-            <!-- /.end blocl section -->
+            <!-- /.end block section -->
+            <!-- Start Block Section -->
+            <section class="logo-brands">
+                <div class="container">
+                    <div class="logo-brands__container">
+                        <div class="row">
+                            <div class="col-lg-2 d-lg-flex flex-lg-wrap align-items-lg-center justify-content-lg-center pr-lg-0">
+                                <p class="logo-brands__title">Trusted by:</p>
+                            </div>
+                            <div class="col-lg-10">
+                                <ul class="logo-brands__list">
+                                    <li class="logo-brands__item">
+                                        <img src="dist/images/brand-logo/skype.svg" alt="Brands" class="img-fluid">
+                                    </li>
+                                    <li class="logo-brands__item">
+                                        <img src="dist/images/brand-logo/google.svg" alt="Brands" class="img-fluid">
+                                    </li>
+                                    <li class="logo-brands__item">
+                                        <img src="dist/images/brand-logo/paypal.svg" alt="Brands" class="img-fluid">
+                                    </li>
+                                    <li class="logo-brands__item">
+                                        <img src="dist/images/brand-logo/slack.svg" alt="Brands" class="img-fluid">
+                                    </li>
+                                    <li class="logo-brands__item">
+                                        <img src="dist/images/brand-logo/fb.svg" alt="Brands" class="img-fluid">
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.end block section -->
+            <!-- Start Block Section -->
+            <section class="block-section block-spaces featured-candidates">
+                <div class="container">
+                    <h2 class="text-center text-uppercase">Featured Candidates</h2>
+                    <div class="row">
+                        <div class="col-lg-4">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- /.end block section -->
         </main>
         <!-- /.end main content -->
         <!-- Start Main Footer -->
@@ -107,6 +161,8 @@
     <!-- /.end page-wrapper -->
 
     <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="dist/js/main.js"></script>
 </body>
 </html>
