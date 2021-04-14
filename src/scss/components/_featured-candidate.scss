@@ -3,6 +3,10 @@
 ==============================================================================*/
 
 .featured-candidate {
+    .filter {
+        margin-bottom: 4em;
+    }
+
     &__container {
         border: 1px solid $bg-black-l80;
         box-shadow: 2px 6px 18px -3px rgba($bg-black, 0.75);

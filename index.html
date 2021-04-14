@@ -26,7 +26,7 @@
                     <ul class="nav__list">
                         <li class="nav__item nav__item--search">
                             <div class="nav__search-icon">
-                                <i class="fa fa-search" aria-hidden="true"></i>
+                                <a class="nav__search-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                             </div>
                             <input type="text" class="form-control nav__search-input" placeholder="Enter Job Title">
                         </li>
@@ -63,7 +63,7 @@
             <!-- Start Block Section -->
             <section class="block-section hero-banner">
                 <div class="container">
-                    <h1 class="text-white">Recruit. Manage. Succeed.</h1>
+                    <h1 class="text-white mt-5 mt-sm-0">Recruit. Manage. Succeed.</h1>
                     <div class="long-search">
                         <div class="row">
                             <div class="col-12 col-md-4 col-lg-3 pr-md-0">
@@ -73,70 +73,216 @@
                                     <i class="fa fa-chevron-down" aria-hidden="true"></i>
                                 </div>
                                 <div class="long-search__categories">
-                                    <div>
-                                        <select name="cars" id="cars">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="opel">Opel</option>
-                                            <option value="audi">Audi</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select name="cars" id="cars">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="opel">Opel</option>
-                                            <option value="audi">Audi</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select name="cars" id="cars">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="opel">Opel</option>
-                                            <option value="audi">Audi</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select name="cars" id="cars">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="opel">Opel</option>
-                                            <option value="audi">Audi</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select name="cars" id="cars">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="opel">Opel</option>
-                                            <option value="audi">Audi</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select name="cars" id="cars">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="opel">Opel</option>
-                                            <option value="audi">Audi</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select name="cars" id="cars">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="opel">Opel</option>
-                                            <option value="audi">Audi</option>
-                                        </select>
-                                    </div>
-                                    <div>
-                                        <select name="cars" id="cars">
-                                            <option value="volvo">Volvo</option>
-                                            <option value="saab">Saab</option>
-                                            <option value="opel">Opel</option>
-                                            <option value="audi">Audi</option>
-                                        </select>
-                                    </div>
+                                    <ul id="accordion" class="dropdown-category">
+                                        <li class="dropdown-category__item">
+                                            <div class="dropdown-category__link">
+                                                Education Level
+                                                <i class="fa fa-chevron-down"></i>
+                                            </div>
+                                            <ul class="dropdown-category__submenu">
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          Certificate
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          Diploma
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          Associate Degree
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          Bachelor's Degree
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          Master's Degree
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          Doctorate Degree
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-category__item">
+                                            <div class="dropdown-category__link">
+                                                Experience
+                                                <i class="fa fa-chevron-down"></i>
+                                            </div>
+                                            <ul class="dropdown-category__submenu">
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          0 - 2 Experience
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            3 - 5 Experience
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            6 - 7 Experience
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          More than 35
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-category__item">
+                                            <div class="dropdown-category__link">
+                                                Specialization
+                                                <i class="fa fa-chevron-down"></i>
+                                            </div>
+                                            <ul class="dropdown-category__submenu">
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          Animator
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Architect
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            Artist
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          Bookkeeper
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          Call Operator
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-category__item">
+                                            <div class="dropdown-category__link">
+                                                Age Range
+                                                <i class="fa fa-chevron-down"></i>
+                                            </div>
+                                            <ul class="dropdown-category__submenu">
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          18 - 22 Years
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            23 - 27 Years
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            28 - 32 Years
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown-category__item">
+                                            <div class="dropdown-category__link">
+                                                Expected Salary
+                                                <i class="fa fa-chevron-down"></i>
+                                            </div>
+                                            <ul class="dropdown-category__submenu">
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                          15K - 16K
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            16K - 20K
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                                <li class="dropdown-category__submenu-item">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                        <label class="form-check-label" for="flexCheckDefault">
+                                                            20k - 25K
+                                                        </label>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>                                      
                                 </div>
                             </div>
                             <div class="col-12 col-md-8 col-lg-9 pl-md-0">
@@ -206,7 +352,160 @@
             <section class="block-section block-spaces featured-candidate">
                 <div class="container">
                     <h2 class="title">Featured Candidates</h2>
-                    <p class="text-center">FILTER HERE</p>
+                    <div class="filter">
+                        <div class="filter__multiselect">
+                            <p class="mb-0">Filter Candidates</p>
+                            <i class="fa fa-sliders" aria-hidden="true"></i>
+                        </div>
+                        <div class="filter__categories">
+                            <ul id="accordionFilter" class="dropdown-category">
+                                <li class="dropdown-category__item border-0 py-2">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="prescreened">
+                                        <label class="form-check-label" for="prescreened">
+                                            Pre-screened Candidates Only
+                                        </label>
+                                    </div>
+                                </li>
+                                <li class="dropdown-category__item">
+                                    <div class="dropdown-category__link dropdown-category__link--filter">
+                                        Education Level
+                                        <i class="fa fa-chevron-down"></i>
+                                    </div>
+                                    <ul class="dropdown-category__submenu dropdown-category__submenu--filter">
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  Certificate
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  Diploma
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  Associate Degree
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  Bachelor's Degree
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  Master's Degree
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  Doctorate Degree
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-category__item">
+                                    <div class="dropdown-category__link dropdown-category__link--filter">
+                                        Specialization
+                                        <i class="fa fa-chevron-down"></i>
+                                    </div>
+                                    <ul class="dropdown-category__submenu dropdown-category__submenu--filter">
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  Animator
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Architect
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Artist
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  Bookkeeper
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  Call Operator
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-category__item">
+                                    <div class="dropdown-category__link dropdown-category__link--filter">
+                                        Expected Salary
+                                        <i class="fa fa-chevron-down"></i>
+                                    </div>
+                                    <ul class="dropdown-category__submenu dropdown-category__submenu--filter">
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  15K - 16K
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    16K - 20K
+                                                </label>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-category__submenu-item">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    20k - 25K
+                                                </label>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>                                      
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-6 col-lg-4 mb-3">
                             <div class="featured-candidate__container">
