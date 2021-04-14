@@ -8714,6 +8714,12 @@ a {
   a:hover {
     color: #f25a15; }
 
+.main-content {
+  margin-bottom: 4em; }
+  @media (min-width: 992px) {
+    .main-content {
+      margin-bottom: 6em; } }
+
 /* ============================================================================
 ** Global Classes
 ==============================================================================*/
@@ -8948,6 +8954,62 @@ a {
 /* ============================================================================
 ** footer Styles
 ==============================================================================*/
+.main-footer {
+  background: #222222;
+  padding: 2em 0;
+  clear: both;
+  position: relative;
+  bottom: 0;
+  width: 100%; }
+  @media (min-width: 992px) {
+    .main-footer {
+      padding: 4em 0; } }
+  .main-footer__social-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; }
+    @media (min-width: 992px) {
+      .main-footer__social-list {
+        justify-content: flex-start; } }
+  .main-footer__social-item {
+    margin-right: 10px; }
+    .main-footer__social-item:last-child {
+      margin-right: 0; }
+  .main-footer__social-link {
+    color: #eeeeee;
+    font-size: 1.2rem; }
+    .main-footer__social-link:hover {
+      color: #ffffff;
+      text-decoration: none; }
+  .main-footer__bottom {
+    border-top: 1px solid #6f6f6f;
+    margin-top: 3em;
+    padding-top: 3em; }
+  .main-footer__list {
+    padding: 0;
+    list-style: none;
+    text-align: center; }
+    @media (min-width: 992px) {
+      .main-footer__list {
+        display: flex;
+        justify-content: center; } }
+  @media (min-width: 992px) {
+    .main-footer__item {
+      margin-right: 20px; }
+      .main-footer__item:last-child {
+        margin-right: 0; } }
+  .main-footer__link {
+    color: #eeeeee;
+    font-size: 0.875rem; }
+    .main-footer__link:hover {
+      color: #ffffff;
+      text-decoration: none; }
+  .main-footer__copyrights {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 0; }
+
 /* ============================================================================
 ** Buttons Styles
 ==============================================================================*/
@@ -9403,28 +9465,24 @@ a {
 /* ============================================================================
 ** Discover styles
 ==============================================================================*/
-.discover {
-  margin-bottom: 4em; }
+.discover__content {
+  background: #222222;
+  padding: 1em;
+  color: #ffffff;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .discover__content {
+      min-height: 390px;
+      padding: 2.5em 1em; } }
+  @media (min-width: 1200px) {
+    .discover__content {
+      min-height: 290px; } }
   @media (min-width: 992px) {
-    .discover {
-      margin-bottom: 6em; } }
-  .discover__content {
-    background: #222222;
-    padding: 1em;
-    color: #ffffff;
-    text-align: center; }
-    @media (min-width: 768px) {
-      .discover__content {
-        min-height: 390px;
-        padding: 2.5em 1em; } }
-    @media (min-width: 1200px) {
-      .discover__content {
-        min-height: 290px; } }
-    @media (min-width: 992px) {
-      .discover__content p {
-        line-height: 2; } }
-  .discover__title {
-    font-family: "Montserrat", sans-serif;
-    font-size: 1.875rem;
-    text-transform: uppercase;
-    margin-bottom: 0.5em; }
+    .discover__content p {
+      line-height: 2; } }
+
+.discover__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5em; }

@@ -3,12 +3,6 @@
 ==============================================================================*/
 
 .discover {
-    margin-bottom: 4em;
-
-	@include desktopUp {
-		margin-bottom: 6em;
-	}
-
     &__content {
         background: $bg-black;
         padding: 1em;
