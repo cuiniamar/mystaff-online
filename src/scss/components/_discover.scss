@@ -1,0 +1,40 @@
+/* ============================================================================
+** Discover styles
+==============================================================================*/
+
+.discover {
+    margin-bottom: 4em;
+
+	@include desktopUp {
+		margin-bottom: 6em;
+	}
+
+    &__content {
+        background: $bg-black;
+        padding: 1em;
+        color: $white;
+        text-align: center;
+
+        @include tabletUp {
+            min-height: 390px;
+            padding: 2.5em 1em;
+        }
+
+        @include widescreenUp {
+            min-height: 290px;
+        }
+
+        p {
+            @include desktopUp {
+                line-height: 2;
+            }
+        }
+    }
+
+    &__title {
+        font-family: $font-secondary;
+        font-size: pxToRem(30px);
+        text-transform: uppercase;
+        margin-bottom: 0.5em;
+    }
+}

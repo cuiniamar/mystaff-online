@@ -9399,3 +9399,32 @@ a {
     .find-candidate__icon span {
       color: #a2a2a2;
       font-size: 1.3rem; }
+
+/* ============================================================================
+** Discover styles
+==============================================================================*/
+.discover {
+  margin-bottom: 4em; }
+  @media (min-width: 992px) {
+    .discover {
+      margin-bottom: 6em; } }
+  .discover__content {
+    background: #222222;
+    padding: 1em;
+    color: #ffffff;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .discover__content {
+        min-height: 390px;
+        padding: 2.5em 1em; } }
+    @media (min-width: 1200px) {
+      .discover__content {
+        min-height: 290px; } }
+    @media (min-width: 992px) {
+      .discover__content p {
+        line-height: 2; } }
+  .discover__title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5em; }
