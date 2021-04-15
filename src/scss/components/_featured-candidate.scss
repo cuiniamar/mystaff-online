@@ -9,7 +9,7 @@
 
     &__container {
         border: 1px solid $bg-black-l80;
-        box-shadow: 2px 6px 18px -3px rgba($bg-black, 0.75);
+        box-shadow: 0 5px 15px rgba(0,0,0,.1);
         padding-top: 1em;
         position: relative;
 
@@ -28,6 +28,10 @@
             @include mobileUp {
                 margin-top: 1.5em;
                 margin-bottom: 1em;
+            }
+
+            @include desktopUp {
+                margin-top: 1em;
             }
         }
     }

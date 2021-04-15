@@ -8718,7 +8718,16 @@ a {
   margin-bottom: 4em; }
   @media (min-width: 992px) {
     .main-content {
-      margin-bottom: 6em; } }
+      margin-bottom: 8em; } }
+
+input,
+textarea,
+select {
+  border: 1px solid #bbbbbb; }
+  input::placeholder,
+  textarea::placeholder,
+  select::placeholder {
+    color: #a2a2a2; }
 
 /* ============================================================================
 ** Global Classes
@@ -8730,7 +8739,7 @@ a {
   margin-top: 4em; }
   @media (min-width: 992px) {
     .block-spaces {
-      margin-top: 6em; } }
+      margin-top: 8em; } }
 
 .title {
   text-transform: uppercase;
@@ -9180,6 +9189,8 @@ a {
     padding: 1em;
     border: 1px solid #eeeeee;
     border-radius: 4px; }
+    .long-search__multiselect:hover {
+      cursor: pointer; }
     @media (min-width: 768px) {
       .long-search__multiselect {
         border-radius: 6px 0 0 6px; } }
@@ -9369,7 +9380,7 @@ a {
 
 .featured-candidate__container {
   border: 1px solid #eeeeee;
-  box-shadow: 2px 6px 18px -3px rgba(34, 34, 34, 0.75);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding-top: 1em;
   position: relative; }
   @media (min-width: 576px) {
@@ -9383,6 +9394,10 @@ a {
   .featured-candidate__head img {
     margin-top: 1.5em;
     margin-bottom: 1em; } }
+
+@media (min-width: 992px) {
+  .featured-candidate__head img {
+    margin-top: 1em; } }
 
 .featured-candidate__body {
   margin: 1em 0; }
@@ -9539,7 +9554,7 @@ a {
     .find-candidate__group input {
       border: 1px solid #bbbbbb;
       padding-left: 54px;
-      border-radius: 4; }
+      border-radius: 4px; }
     .find-candidate__group::placeholder {
       color: #a2a2a2; }
     .find-candidate__group .button-main {
@@ -9603,6 +9618,8 @@ a {
     padding: 1em;
     border: 1px solid #bbbbbb;
     border-radius: 4px; }
+    .filter__multiselect:hover {
+      cursor: pointer; }
   .filter__categories {
     background-color: #ffffff;
     border: 1px solid #eeeeee;

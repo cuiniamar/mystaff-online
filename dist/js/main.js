@@ -11,6 +11,9 @@ $(document).ready(function () {
 		const navigation = document.querySelector('.main-header');
 		const navTrigger = document.querySelector('.nav__icon');
 		const navLinks = document.querySelector('.nav__links');
+		const modalTrigger = document.querySelector('.nav__search-icon');
+		const modalSearch = document.querySelector('.search-modal');
+		const modalClose = document.querySelector('.search-modal__btn-close');
 
 		window.addEventListener('scroll', () => {
 			const scrollPosition = window.scrollY;
@@ -48,42 +51,31 @@ $(document).ready(function () {
 				categoryDp.classList.toggle('is-active');
 			});
 		}
-	})();
-	// ==========================================================================
 
-	// ==========================================================================
-	// Category dropdown
-	// ==========================================================================
-	(function() {
+		// Category Accordion
 		var Accordion = function(el, multiple) {
 			this.el = el || {};
 			this.multiple = multiple || false;
 	
-			// Private Variables
-			var links = this.el.find('.dropdown-category__link');
-			// Events
-			links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+			var links = this.el.find('.dropdown-category__link'); // Private Variables
+			links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown); // Events
 		}
 	
 		Accordion.prototype.dropdown = function(e) {
-			var $el = e.data.el;
-				$this = $(this),
-				$next = $this.next();
-	
-			$next.slideToggle();
-			$this.parent().toggleClass('is-opened');
+			$(this).next().slideToggle();
+			$(this).parent().toggleClass('is-opened');
 	
 			if (!e.data.multiple) {
-				$el.find('.dropdown-category__submenu').not($next).slideUp().parent().removeClass('.is-opened');
+				e.data.el.find('.dropdown-category__submenu').not($(this).next()).slideUp().parent().removeClass('is-opened');
 			};
 		}	
 	
-		var accordion = new Accordion($('#accordion'), false);		
+		new Accordion($('#accordion'), false);	
 	})();
 	// ==========================================================================
 
 	// ==========================================================================
-	// Long search dropdown
+	// Filter dropdown
 	// ==========================================================================
 	(function() {
 		const filterTrigger = document.querySelector('.filter__multiselect');
@@ -95,37 +87,57 @@ $(document).ready(function () {
 				filterDropdown.classList.toggle('is-active');
 			});
 		}
-	})();
-	// ==========================================================================
-	
-	// ==========================================================================
-	// Candidates Filter
-	// ==========================================================================
-	(function() {
+
+		// Candidates Accordion
 		var AccordionFilter = function(el, multiple) {
 			this.el = el || {};
 			this.multiple = multiple || false;
 	
-			// Private Variables
-			var links = this.el.find('.dropdown-category__link--filter');
-			// Events
-			links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown)
+			var links = this.el.find('.dropdown-category__link--filter'); // Private Variables
+			links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown); // Events
 		}
 	
 		AccordionFilter.prototype.dropdown = function(e) {
-			var $el = e.data.el;
-				$this = $(this),
-				$next = $this.next();
-	
-			$next.slideToggle();
-			$this.parent().toggleClass('is-opened');
+			$(this).next().slideToggle();
+			$(this).parent().toggleClass('is-opened');
 	
 			if (!e.data.multiple) {
-				$el.find('.dropdown-category__submenu--filter').not($next).slideUp().parent().removeClass('.is-opened');
+				e.data.el.find('.dropdown-category__submenu--filter').not($(this).next()).slideUp().parent().removeClass('is-opened');
 			};
 		}	
 	
-		var accFilter = new AccordionFilter($('#accordionFilter'), false);		
+		new AccordionFilter($('#accordionFilter'), false);
 	})();
+	// ==========================================================================
+
+	// ==========================================================================
+	// Close multiselect
+	// ==========================================================================
+	$(document).on('click', function(event){
+		if (!$(event.target).closest('.long-search__multiselect, .long-search__categories').length) {
+			$('.long-search__categories').removeClass('is-active');
+		}
+
+		if (!$(event.target).closest('.filter__multiselect, .filter__categories').length) {
+			$('.filter__categories').removeClass('is-active');
+		}
+	});
+	// ==========================================================================
+
+	// ==========================================================================
+	// Search Modal
+	// ==========================================================================
+	// (function() {
+	// 	const openModal = document.querySelectorAll('.main-header');
+
+	// 	console.log('test');
+
+	// 	for (const el of openModal) {
+	// 		el.addEventListener("click", function() {
+	// 		  const modalId = this.dataset.open;
+	// 		  document.getElementById(modalId).classList.add('is-opened');
+	// 		});
+	// 	}
+	// });
 	// ==========================================================================
 }); // end document.ready
