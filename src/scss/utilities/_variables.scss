@@ -38,6 +38,8 @@ $black: #000000;
 $color-1: #F36B2D !default;
 $color-2: #222222 !default;
 $color-3: #43A047 !default;
+$color-4: #F6F7F9 !default;
+$color-5: #05DE0E !default;
 
 // ===============================
 // Derived Colors
@@ -81,6 +83,12 @@ $text-black-l85: $color-2-l85;
 
 $text-accent: $color-3;
 $bg-accent: $color-3;
+
+$text-grey: $color-4;
+$bg-grey: $color-4;
+
+$text-lgreen: $color-5;
+$bg-lgreen: $color-5;
 
 // ======================================
 // Background Images

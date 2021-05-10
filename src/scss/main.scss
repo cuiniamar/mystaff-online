@@ -57,13 +57,16 @@
 @import "components/find-candidate";
 @import "components/discover";
 @import "components/filter";
+@import "components/nav-dropdown";
+@import "components/payment-header";
+@import "components/payment-content";
 
 
 // ============================================================================
 // Pages
 // ============================================================================
 
-// @import "pages/";
+@import "pages/payment-management";
 
 
 // ============================================================================

@@ -1,0 +1,16 @@
+/* ============================================================================
+** Payment Header Styles
+==============================================================================*/
+
+.payment-header {
+    &__title {
+        margin-top: 1em;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    p {
+        color: $text-black-l60;
+    }
+}

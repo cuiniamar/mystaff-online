@@ -44,6 +44,12 @@ $navHeightSm: 100px;
     &.is-colored {
         background-color: $bg-black;
     }
+
+    &.main-header--static {
+        position: static;
+        background-color: $black;
+        height: auto;
+    }
 }
 
 .nav {
@@ -255,6 +261,8 @@ $navHeightSm: 100px;
     }
 
     &__item {
+        position: relative;
+        
         @include desktopUp {
             margin-right: 20px;
         }

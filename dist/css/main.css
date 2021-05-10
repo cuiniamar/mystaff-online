@@ -8798,6 +8798,10 @@ select {
         height: 100px; } }
   .main-header.is-colored {
     background-color: #222222; }
+  .main-header.main-header--static {
+    position: static;
+    background-color: #000000;
+    height: auto; }
 
 .nav {
   display: flex;
@@ -8941,28 +8945,30 @@ select {
     @media (min-width: 992px) {
       .nav__list:last-child .nav__item:last-child {
         margin-right: 0; } }
-  @media (min-width: 992px) {
-    .nav__item {
-      margin-right: 20px; } }
-  .nav__item--search {
+  .nav__item {
     position: relative; }
-  @media (min-width: 992px) {
-    .nav__item--create {
-      background-color: #F36B2D;
-      border-radius: 4px;
-      width: 128px;
-      height: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center; } }
-  @media (min-width: 992px) {
-    .nav__item--create:hover {
-      background-color: #f25a15;
-      cursor: pointer; } }
-  @media (min-width: 992px) {
-    .nav__item--create .nav__link:hover {
-      color: #ffffff; } }
+    @media (min-width: 992px) {
+      .nav__item {
+        margin-right: 20px; } }
+    .nav__item--search {
+      position: relative; }
+    @media (min-width: 992px) {
+      .nav__item--create {
+        background-color: #F36B2D;
+        border-radius: 4px;
+        width: 128px;
+        height: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center; } }
+    @media (min-width: 992px) {
+      .nav__item--create:hover {
+        background-color: #f25a15;
+        cursor: pointer; } }
+    @media (min-width: 992px) {
+      .nav__item--create .nav__link:hover {
+        color: #ffffff; } }
   .nav__link {
     color: #eeeeee;
     position: relative; }
@@ -9638,3 +9644,200 @@ select {
     .filter__categories.is-active {
       z-index: 2;
       opacity: 1; }
+
+/* ============================================================================
+** Nav Dropdown Styles
+==============================================================================*/
+.nav-dropdown {
+  box-shadow: 5px 9px 14px 0px rgba(0, 0, 0, 0.43);
+  width: 350px;
+  position: absolute; }
+  .nav-dropdown--notif {
+    list-style-type: none;
+    padding: 0;
+    background-color: #ffffff; }
+    .nav-dropdown--notif li {
+      border-top: 1px solid #eeeeee;
+      padding: 0.9em 0;
+      background-color: #F6F7F9; }
+      .nav-dropdown--notif li.marked {
+        border: 0;
+        padding: 0; }
+        .nav-dropdown--notif li.marked a {
+          color: #a2a2a2;
+          font-style: italic; }
+      .nav-dropdown--notif li.is-active {
+        border-left: 2px solid #f25a15;
+        background-color: #ffffff; }
+        .nav-dropdown--notif li.is-active a p:nth-child(1) {
+          font-weight: 600;
+          color: #a2a2a2;
+          font-size: 0.9rem; }
+        .nav-dropdown--notif li.is-active a p:nth-child(2) {
+          font-weight: 700;
+          color: #000000; }
+      .nav-dropdown--notif li a {
+        text-decoration: none; }
+        .nav-dropdown--notif li a:hover {
+          text-decoration: none; }
+        .nav-dropdown--notif li a p {
+          margin-bottom: 0;
+          padding: 0 2em; }
+          .nav-dropdown--notif li a p:nth-child(1) {
+            color: #a2a2a2;
+            font-size: 0.9rem; }
+          .nav-dropdown--notif li a p:nth-child(2) {
+            color: #000000; }
+          .nav-dropdown--notif li a p:nth-child(3) {
+            font-style: italic;
+            font-size: 0.9rem;
+            color: #a2a2a2; }
+
+/* ============================================================================
+** Payment Header Styles
+==============================================================================*/
+.payment-header__title {
+  margin-top: 1em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2rem; }
+
+.payment-header p {
+  color: #bbbbbb; }
+
+/* ============================================================================
+** Payment Content Style
+==============================================================================*/
+.payment-content {
+  margin-top: 4em; }
+  .payment-content__content {
+    border-top: 1px solid #eeeeee;
+    display: flex; }
+  .payment-content__list {
+    padding: 0;
+    list-style: none;
+    position: relative; }
+    @media (min-width: 992px) {
+      .payment-content__list {
+        width: 40%; }
+        .payment-content__list::after {
+          content: '';
+          width: 2px;
+          height: 100%;
+          background-color: #eeeeee;
+          position: absolute;
+          top: 0;
+          right: 0; } }
+  .payment-content__link {
+    margin-top: 4em;
+    margin-bottom: 6em;
+    position: relative; }
+    .payment-content__link:last-child {
+      margin-bottom: 0; }
+    @media (min-width: 992px) {
+      .payment-content__link.is-active::after {
+        background-color: #05DE0E;
+        border-color: #05DE0E;
+        top: 54px;
+        right: -5px;
+        z-index: 1; }
+      .payment-content__link::after {
+        content: '';
+        background-color: #ffffff;
+        border-radius: 50%;
+        border: 1px solid #e1e1e1;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: 30px;
+        right: -5px;
+        z-index: 1; } }
+  .payment-content__tab-text.is-active {
+    background-color: #F6F7F9;
+    padding: 0.8em; }
+  .payment-content__tab-text p:nth-child(1) {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 700;
+    text-align: right;
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif; }
+  .payment-content__tab-text p:nth-child(2) {
+    color: #bbbbbb;
+    text-align: right;
+    font-weight: 600; }
+  .payment-content__tab-icon {
+    width: 66px;
+    height: 66px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #eeeeee; }
+    .payment-content__tab-icon .fa {
+      color: #e1e1e1;
+      font-size: 2rem; }
+    .payment-content__tab-icon.is-active {
+      background-color: #f25a15; }
+      .payment-content__tab-icon.is-active .fa {
+        color: #ffffff; }
+  .payment-content__details, .payment-content__terms {
+    display: none; }
+  .payment-content__details, .payment-content__terms, .payment-content__cc-form {
+    padding-left: 2em;
+    margin-top: 4em;
+    width: 60%; }
+  .payment-content__details-title {
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    color: #a2a2a2;
+    text-transform: uppercase; }
+  .payment-content__candidate-description {
+    padding: 0;
+    list-style: none;
+    margin-top: 2em; }
+    .payment-content__candidate-description li {
+      margin-bottom: 20px;
+      font-weight: 700; }
+      .payment-content__candidate-description li span {
+        color: #bbbbbb;
+        font-weight: 600; }
+  .payment-content__subtitle {
+    color: #a2a2a2; }
+  .payment-content__terms-text {
+    max-height: 500px;
+    overflow-y: auto;
+    line-break: 2;
+    border: 1px solid #eeeeee;
+    padding: 1em; }
+  .payment-content__back a {
+    color: #000000; }
+    .payment-content__back a:hover {
+      text-decoration: none; }
+    .payment-content__back a .fa {
+      color: #f25a15; }
+  .payment-content__cc-form .nav {
+    height: 180px; }
+  .payment-content__cc-form .nav-tabs .nav-item .nav-link.active {
+    border: 0;
+    background-color: none; }
+  .payment-content__cc-form .nav-tabs .nav-item:nth-child(2) {
+    border: 2px dashed #f25a15;
+    padding: 2em;
+    border-radius: 10px; }
+    .payment-content__cc-form .nav-tabs .nav-item:nth-child(2) a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+  .payment-content__cc {
+    width: 70%; }
+
+/* ============================================================================
+** Payment Management Styles
+==============================================================================*/
+.payment-management {
+  margin: 4em 0; }

@@ -1,0 +1,206 @@
+/* ============================================================================
+** Payment Content Style
+==============================================================================*/
+
+.payment-content {
+    margin-top: 4em;
+    
+    &__content {
+        border-top: 1px solid $bg-black-l80;
+        display: flex;
+    }
+
+    &__list {
+        padding: 0;
+        list-style: none;
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
+            width: 40%;
+
+            &::after {
+                content: '';
+                width: 2px;
+                height: 100%;
+                background-color: $bg-black-l80;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+    }
+
+    &__link {
+        margin-top: 4em;
+        margin-bottom: 6em;
+        position: relative;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include media-breakpoint-up(lg) {
+            &.is-active {
+                &::after {
+                    background-color: $bg-lgreen;
+                    border-color: $bg-lgreen;
+                    top: 54px;
+                    right: -5px;
+                    z-index: 1;
+                }
+            }
+
+            &::after {
+                content: '';
+                background-color: $white;
+                border-radius: 50%;
+                border: 1px solid $bg-black-l75;
+                width: 12px;
+                height: 12px;
+                position: absolute;
+                top: 30px;
+                right: -5px;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__tab-text {
+        &.is-active {
+            background-color: $bg-grey;
+            padding: 0.8em;
+        }
+
+        p:nth-child(1) {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            color: $black;
+            font-weight: 700;
+            text-align: right;
+            margin-bottom: 10px;
+            font-family: $font-secondary;
+        }
+
+        p:nth-child(2) {
+            color: $text-black-l60;
+            text-align: right;
+            font-weight: 600;
+        }
+    }
+
+    &__tab-icon {
+        width: 66px;
+        height: 66px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background-color: $white;
+        border: 1px solid $bg-black-l80;
+
+        .fa {
+            color: $text-black-l75;
+            font-size: 2rem;
+        }
+
+        &.is-active {
+            background-color: $bg-orange-d5;
+
+            .fa {
+                color: $white;
+            }
+        }
+    }
+
+    &__details,
+    &__terms {
+        display: none;
+    }
+
+    &__details,
+    &__terms,
+    &__cc-form {
+        padding-left: 2em;
+        margin-top: 4em;
+        width: 60%;
+    }
+
+    &__details-title {
+        font-weight: 700;
+        font-family: $font-secondary;
+        color: $text-black-l50;
+        text-transform: uppercase;
+    }
+
+    &__candidate-description {
+        padding: 0;
+        list-style: none;
+        margin-top: 2em;
+
+        li {
+            margin-bottom: 20px;
+
+            span {
+                color: $text-black-l60;
+                font-weight: 600;
+            }
+
+            font-weight: 700;
+        }
+    }
+
+    &__subtitle {
+        color: $text-black-l50;
+    }
+
+    &__terms-text {
+        max-height: 500px;
+        overflow-y: auto;
+        line-break: 2;
+        border: 1px solid $bg-black-l80;
+        padding: 1em;
+    }
+
+    &__back a {
+        color: $black;
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        .fa {
+            color: $text-orange-d5;
+        }
+    }
+
+    &__cc-form {
+        .nav {
+            height: 180px;
+        }
+
+        .nav-tabs {
+            .nav-item .nav-link.active {
+                border: 0;
+                background-color: none;
+            }
+
+            .nav-item:nth-child(2) {
+                border: 2px dashed $bg-orange-d5;
+                padding: 2em;
+                border-radius: 10px;
+
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+
+    &__cc {
+        width: 70%;
+    }
+}

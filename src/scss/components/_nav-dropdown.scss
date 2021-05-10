@@ -1,0 +1,79 @@
+/* ============================================================================
+** Nav Dropdown Styles
+==============================================================================*/
+
+.nav-dropdown {
+    box-shadow: 5px 9px 14px 0px rgba(0,0,0,0.43);
+    width: 350px;
+    position: absolute;
+
+    &--notif {
+        list-style-type: none;
+        padding: 0;
+        background-color: $white;
+
+        li {
+            border-top: 1px solid $bg-black-l80;
+            padding: 0.9em 0;
+            background-color: $bg-grey;
+
+            &.marked {
+                border: 0;
+                padding: 0;
+
+                a {
+                    color: $text-black-l50;
+                    font-style: italic;
+                }
+            }
+
+            &.is-active {
+                border-left: 2px solid $bg-orange-d5;
+                background-color: $white;
+
+                a {
+                    p {
+                        &:nth-child(1) {
+                            font-weight: 600;
+                            color: $text-black-l50;
+                            font-size: 0.9rem;
+                        }
+    
+                        &:nth-child(2) {
+                            font-weight: 700;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+
+            a {
+                text-decoration: none;
+                
+                &:hover {
+                    text-decoration: none;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    padding: 0 2em;
+
+                    &:nth-child(1) {
+                        color: $text-black-l50;
+                        font-size: 0.9rem;
+                    }
+
+                    &:nth-child(2) {
+                        color: $black;
+                    }
+
+                    &:nth-child(3) {
+                        font-style: italic;
+                        font-size: 0.9rem;
+                        color: $text-black-l50;
+                    }
+                }
+            }
+        }
+    }
+}
