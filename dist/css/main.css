@@ -9183,7 +9183,7 @@ select {
 ** Long seach styles
 ==============================================================================*/
 .long-search {
-  background: yellow;
+  background: pink;
   padding: 1em;
   position: relative; }
   .long-search__multiselect {
